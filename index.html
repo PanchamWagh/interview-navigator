@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Navigator — DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="m2 17 10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="m2 12 10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Interview<span>Navigator</span></h1>
+          <p>DevOps Engineer Edition</p>
+        </div>
+      </div>
+
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="m21 21-4.3-4.3M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="searchInput" placeholder="Filter topics or search..." />
+      </div>
+
+      <div class="filter-pills" id="filterPills"></div>
+
+      <nav class="topics" id="topicList"></nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <svg id="themeIcon" viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="themeLabel">Light Mode</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ===================== MAIN ===================== -->
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar">
+          <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="crumbs">
+          <span class="crumb-home">Interview Navigator</span>
+          <span class="sep">/</span>
+          <span class="crumb-current" id="currentTopic">Introduction</span>
+        </div>
+        <div class="stats" id="stats">
+          <span class="chip"><b id="qCount">0</b> questions</span>
+        </div>
+      </header>
+
+      <section class="content" id="content">
+        <!-- Rendered by JS -->
+      </section>
+    </main>
+
+    <!-- ===================== FOLLOW-UP WINDOWS LAYER ===================== -->
+    <div class="followup-layer" id="followupLayer"></div>
+  </div>
+
+  <template id="followup-template">
+    <div class="followup-window" draggable="false">
+      <div class="fw-header">
+        <div class="fw-title">
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M7 8h10M7 12h6M12 20l-4-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3l-4 4Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="fw-title-text">Follow-ups</span>
+        </div>
+        <div class="fw-actions">
+          <button class="fw-btn fw-min" title="Minimize">–</button>
+          <button class="fw-btn fw-close" title="Close">×</button>
+        </div>
+      </div>
+      <div class="fw-body"></div>
+    </div>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
