@@ -10,18 +10,25 @@
   /* --------------------- CATEGORIES --------------------- */
   const CATEGORY_MAP = {
     // topic id -> category
-    introduction: "fundamentals",
-    projects:     "fundamentals",
-    linux:        "ops",
-    ansible:      "ops",
-    monitoring:   "ops",
-    git:          "cicd",
-    jenkins:      "cicd",
-    docker:       "containers",
-    kubernetes:   "containers",
-    aws:          "cloud",
-    terraform:    "cloud",
-    networking:   "cloud",
+    introduction:  "fundamentals",
+    projects:      "fundamentals",
+    ai:            "fundamentals",
+    linux:         "ops",
+    ansible:       "ops",
+    monitoring:    "ops",
+    git:           "cicd",
+    jenkins:       "cicd",
+    githubactions: "cicd",
+    argocd:        "cicd",
+    sonarqube:     "cicd",
+    docker:        "containers",
+    kubernetes:    "containers",
+    helm:          "containers",
+    aws:           "cloud",
+    azure:         "cloud",
+    gcp:           "cloud",
+    terraform:     "cloud",
+    networking:    "cloud",
   };
 
   const CATEGORIES = [
